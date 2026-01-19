@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Cliente - Satolep Produtos</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Clientes</h1>
+    </header>
+
+    <main id="container">
+        <h3>Adicione mais clientes à sua base de dados</h3>
+
+        <form id="formCadastro">
+            <fieldset>
+                <legend>Gênero</legend>
+
+                <label>
+                    <input type="radio" id="inMasculino" name="inGenero" value="masculino" checked>
+                    Masculino
+                </label>
+
+                <label>
+                    <input type="radio" id="inFeminino" name="inGenero" value="feminino">
+                    Feminino
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <label for="inNome">Nome completo</label>
+                <input type="text" id="inNome" required maxlength="150" minlength="3">
+
+                <label for="inEmail">Email</label>
+                <input type="email" id="inEmail" required>
+
+                <label for="inCpf">CPF (somente números)</label>
+                <input type="text" id="inCpf" required maxlength="11" minlength="11">
+            </fieldset>
+
+            <fieldset>
+                <legend>Observações</legend>
+                <textarea id="inObservacao" rows="6" maxlength="250"></textarea>
+            </fieldset>
+
+            <div class="btnsContainer">
+                <button type="reset" id="btnReset">Limpar</button>
+                <button type="submit">Enviar</button>
+                <a href="../index.html">Voltar</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="../script/cadastrarCliente.js"></script>
+</body>
+</html>
