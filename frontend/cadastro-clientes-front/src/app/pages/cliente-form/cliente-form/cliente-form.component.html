@@ -1,0 +1,58 @@
+<h2>{{ id ? 'Editar Cliente' : 'Novo Cliente' }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="salvar()">
+
+  <div class="form-group">
+    <label>Nome Completo</label>
+    <input type="text" formControlName="nomeCompleto" />
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+  </div>
+
+  <div class="form-group">
+    <label>CPF</label>
+    <input
+      type="text"
+      formControlName="cpf"
+      maxlength="11"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      (input)="somenteNumeros($event)"
+    />
+    <small *ngIf="form.get('cpf')?.errors && form.get('cpf')?.touched">
+      CPF deve conter exatamente 11 números
+    </small>
+  </div>
+
+  <div class="form-group">
+  <label>Gênero</label>
+
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" formControlName="genero" value="masculino" />
+      Masculino
+    </label>
+
+    <label class="radio-option">
+      <input type="radio" formControlName="genero" value="feminino" />
+      Feminino
+    </label>
+  </div>
+</div>
+
+
+  <div class="form-group">
+    <label>Observações</label>
+    <textarea formControlName="observacoes"></textarea>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">
+    Salvar
+  </button>
+
+</form>
+
+

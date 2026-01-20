@@ -1,0 +1,38 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+th {
+  background: #2e7d32;
+  color: white;
+}
+
+button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+}
+
+.danger {
+  background: #c62828;
+  color: white;
+  border: none;
+}

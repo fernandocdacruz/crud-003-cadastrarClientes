@@ -2,7 +2,7 @@ spring:
   application:
     name: cadastroClientes
   datasource:
-    url: jdbc:postgresql://localhost:5432/clientes_db_001
+    url: jdbc:postgresql://localhost:5432/crud-002
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
